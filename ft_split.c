@@ -6,7 +6,7 @@
 /*   By: svrielin <svrielin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/16 17:19:23 by svrielin      #+#    #+#                 */
-/*   Updated: 2021/02/21 17:50:18 by svrielin      ########   odam.nl         */
+/*   Updated: 2021/11/16 12:17:07 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,9 @@ static char	*ft_strndup(char const *s, size_t n)
 	while (s[i] != 0)
 		i++;
 	if (i < n)
-		dest = (char*)malloc((i + 1) * sizeof(char));
+		dest = (char *)malloc((i + 1) * sizeof(char));
 	else
-		dest = (char*)malloc((n + 1) * sizeof(char));
+		dest = (char *)malloc((n + 1) * sizeof(char));
 	if (dest == 0)
 		return (0);
 	if (i < n)
@@ -100,7 +100,7 @@ char	**ft_split(char const *s, char c)
 	if (s == NULL)
 		return (NULL);
 	wrd = ft_count_words(s, c);
-	splitted = (char**)malloc((wrd + 1) * sizeof(char*));
+	splitted = (char **)malloc((wrd + 1) * sizeof(char *));
 	if (splitted == NULL)
 		return (NULL);
 	splitted[wrd] = 0;
@@ -112,7 +112,7 @@ char	**ft_split(char const *s, char c)
 		{
 			splitted[i++] = ft_strndup(&(s[wrd]), find_delimiter(&(s[wrd]), c));
 			if (splitted[i - 1] == 0)
-				return ((char**)ft_free(splitted, i - 1));
+				return ((char **)ft_free(splitted, i - 1));
 			wrd = wrd + find_delimiter(&(s[wrd]), c) - 1;
 		}
 		wrd++;

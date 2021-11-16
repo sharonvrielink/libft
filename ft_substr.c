@@ -6,7 +6,7 @@
 /*   By: svrielin <svrielin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/14 17:20:12 by svrielin      #+#    #+#                 */
-/*   Updated: 2021/02/21 18:25:22 by svrielin      ########   odam.nl         */
+/*   Updated: 2021/11/16 12:18:28 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static char	*create_empty_string(void)
 {
 	char	*dest;
 
-	dest = (char*)malloc(1 * sizeof(char));
+	dest = (char *)malloc(1 * sizeof(char));
 	if (dest == 0)
 		return (0);
 	dest[0] = 0;
@@ -36,9 +36,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	while (s[start + i] != 0)
 		i++;
 	if (i < len)
-		substr = (char*)malloc(i + 1);
+		substr = (char *)malloc(i + 1);
 	else
-		substr = (char*)malloc(len + 1);
+		substr = (char *)malloc(len + 1);
 	if (substr == 0)
 		return (0);
 	if (i < len)
