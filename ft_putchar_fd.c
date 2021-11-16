@@ -6,7 +6,7 @@
 /*   By: svrielin <svrielin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/26 15:02:53 by sharonvriel   #+#    #+#                 */
-/*   Updated: 2021/02/21 17:46:35 by svrielin      ########   odam.nl         */
+/*   Updated: 2021/11/16 13:09:23 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,5 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	ssize_t	error;
-
-	error = write(fd, &c, sizeof(char));
-	if (error == -1)
-		return ;
+	write(fd, &c, sizeof(char));
 }
