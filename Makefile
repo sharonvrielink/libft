@@ -6,7 +6,7 @@
 #    By: svrielin <svrielin@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/11/16 13:32:03 by svrielin      #+#    #+#                  #
-#    Updated: 2021/11/23 12:01:49 by svrielin      ########   odam.nl          #
+#    Updated: 2021/11/23 16:32:13 by svrielin      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,9 +27,15 @@ ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o ft_putstr_fd.o\
 ft_putendl_fd.o ft_putnbr_fd.o)
 all: $(NAME)
 
+# $@ filename of the target $^ all prerequisites
+# r: uses replacement for the objects files while inserting the files member into archive
+# c: create the library if it does not exist
 $(NAME): $(OBJ_FILES)
 	ar rc libft.a $(OBJ_FILES)
 
+# -p: if parent dirs do not exist, generate them to accommodate 
+# gcc -c: compile but not link the file, makes the result an object file
+# gcc -o: name of the output file
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(HEADER_FILES)
 	mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -c $< -o $@
