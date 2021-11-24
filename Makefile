@@ -6,7 +6,7 @@
 #    By: svrielin <svrielin@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/11/16 13:32:03 by svrielin      #+#    #+#                  #
-#    Updated: 2021/11/23 16:32:13 by svrielin      ########   odam.nl          #
+#    Updated: 2021/11/24 19:21:30 by svrielin      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,7 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(HEADER_FILES)
 
 clean:
 	@rm -f $(OBJ_FILES) 
-	@rmdir $(OBJ_DIR)
+	@rm -df $(OBJ_DIR)
 	@echo "Object files and directory removed"
 
 fclean: clean
