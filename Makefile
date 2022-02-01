@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME			:=	libft.a
+NAME			=	libft.a
 HEADER_FILES 	:=	libft.h
 CC				:=	gcc
 CFLAGS			?=	-Wall -Wextra -Werror
@@ -25,13 +25,19 @@ ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o\
 ft_tolower.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o\
 ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o ft_putstr_fd.o\
 ft_putendl_fd.o ft_putnbr_fd.o)
+
+ifdef DEBUG
+CFLAGS	+=	-g
+NAME = libft_debug.a
+endif
+
 all: $(NAME)
 
 # $@ filename of the target $^ all prerequisites
 # r: uses replacement for the objects files while inserting the files member into archive
 # c: create the library if it does not exist
 $(NAME): $(OBJ_FILES)
-	ar rc libft.a $(OBJ_FILES)
+	ar rc $(NAME) $(OBJ_FILES)
 
 # -p: if parent dirs do not exist, generate them to accommodate 
 # gcc -c: compile but not link the file, makes the result an object file
