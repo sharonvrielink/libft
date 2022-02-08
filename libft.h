@@ -41,5 +41,6 @@ void	ft_putnbr_fd(int n, int fd);
 int		ft_numlen(int n);
 size_t	ft_numlen_base(long long n, int base);
 char	*ft_itoa_base(long long n, int base);
+char	*ft_strtoupper(char *str);
 
 #endif
