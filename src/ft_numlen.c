@@ -6,16 +6,16 @@
 /*   By: svrielin <svrielin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/02/03 17:15:53 by svrielin      #+#    #+#                 */
-/*   Updated: 2022/02/03 17:34:14 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/02/08 10:14:48 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-int numlen(int n)
+int ft_numlen(int n)
 {
 	if (n < 0)
-		return (1 + numlen(-n));
+		return (1 + ft_numlen(-n));
 	else if (n < 10)
 		return (1);
 	else
-		return (1 + numlen(n/10));
+		return (1 + ft_numlen(n/10));
 }

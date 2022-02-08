@@ -6,28 +6,11 @@
 /*   By: svrielin <svrielin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/15 17:10:33 by svrielin      #+#    #+#                 */
-/*   Updated: 2021/11/16 12:16:09 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/02/08 10:14:12 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static size_t	ft_numlen(int n)
-{
-	size_t	len;
-
-	if (n == 0)
-		return (1);
-	len = 0;
-	if (n < 0)
-		len++;
-	while (n != 0)
-	{
-		len++;
-		n = n / 10;
-	}
-	return (len);
-}
 
 static char	*ft_strcpy(char *dest, const char *src)
 {
