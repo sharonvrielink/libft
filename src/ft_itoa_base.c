@@ -6,7 +6,7 @@
 /*   By: svrielin <svrielin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/02/08 11:32:58 by svrielin      #+#    #+#                 */
-/*   Updated: 2022/02/08 16:30:27 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/02/08 19:26:18 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,14 @@ char	*ft_itoa_base(long long n, int base)
 	char	*nbr;
 	size_t	len;
 	int		negative;
-
+	int		temp;
+	
 	len = ft_numlen_base(n, base);
 	nbr = (char *)malloc((len + 1) * sizeof(char));
 	if (!nbr)
 		return (NULL);
 	negative = 0;
+	temp = 0;
 	nbr[len] = '\0';
 	if (n == 0)
 		nbr[0] = '0';
@@ -34,7 +36,12 @@ char	*ft_itoa_base(long long n, int base)
 	}
 	while((len - negative) > 0)
 	{
-		nbr[len -1] = n % base + '0';
+		temp = n % base;
+		if (temp > 9 && temp <= base)
+			temp += 87;
+		else
+			temp += '0';
+		nbr[len - 1] = temp;
 		n = n / base;
 		len--;
 	}
