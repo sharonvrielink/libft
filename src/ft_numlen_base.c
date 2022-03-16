@@ -6,7 +6,7 @@
 /*   By: svrielin <svrielin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/02/08 15:41:14 by svrielin      #+#    #+#                 */
-/*   Updated: 2022/02/08 19:26:33 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/03/16 20:58:38 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,13 @@
 
 size_t ft_numlen_base(long long n, int base)
 {
-	if (n < 0 && base == 10)
-		return (1 + ft_numlen_base(-n, base));
-	else if (n < base)
-		return (1);
-	else
-		return (1 + ft_numlen_base(n/base, base));
+	size_t i;
+	
+	i = 1;
+	while (n >= base)
+	{
+		n /= base;
+		i++;
+	}
+	return (i);
 }
