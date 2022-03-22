@@ -6,13 +6,13 @@
 /*   By: svrielin <svrielin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/02/08 11:32:58 by svrielin      #+#    #+#                 */
-/*   Updated: 2022/03/16 20:07:20 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/03/22 11:12:49 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa_base(long long n, int base)
+char	*ft_itoa_base(unsigned long long n, int base)
 {
 	char	*nbr;
 	size_t	len;
