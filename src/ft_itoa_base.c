@@ -6,19 +6,19 @@
 /*   By: svrielin <svrielin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/02/08 11:32:58 by svrielin      #+#    #+#                 */
-/*   Updated: 2022/03/22 11:12:49 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/04/12 17:40:33 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa_base(unsigned long long n, int base)
+char	*ft_itoa_base (unsigned long long n, int base)
 {
 	char	*nbr;
 	size_t	len;
 	int		negative;
 	int		temp;
-	
+
 	len = ft_numlen_base(n, base);
 	nbr = (char *)malloc((len + 1) * sizeof(char));
 	if (!nbr)
@@ -28,13 +28,13 @@ char	*ft_itoa_base(unsigned long long n, int base)
 	nbr[len] = '\0';
 	if (n == 0)
 		nbr[0] = '0';
-	if (n < 0 && base == 10)
+	if (n < 0 && base == 10) //kan negative niet met andere base nummers?
 	{
 		negative = 1;
 		n = -n;
 		nbr[0] = '-';
 	}
-	while((len - negative) > 0)
+	while ((len - negative) > 0)
 	{
 		temp = n % base;
 		if (temp > 9 && temp <= base)
@@ -45,5 +45,5 @@ char	*ft_itoa_base(unsigned long long n, int base)
 		n = n / base;
 		len--;
 	}
-	return(nbr);
+	return (nbr);
 }

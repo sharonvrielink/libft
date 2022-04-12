@@ -6,15 +6,15 @@
 /*   By: svrielin <svrielin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/02/08 19:40:43 by svrielin      #+#    #+#                 */
-/*   Updated: 2022/02/08 19:46:08 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/04/12 17:37:58 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strtoupper(char *str)
+char	*ft_strtoupper(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
