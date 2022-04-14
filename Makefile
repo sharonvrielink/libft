@@ -6,7 +6,7 @@
 #    By: svrielin <svrielin@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/11/16 13:32:03 by svrielin      #+#    #+#                  #
-#    Updated: 2022/02/08 19:48:16 by svrielin      ########   odam.nl          #
+#    Updated: 2022/04/14 15:10:04 by svrielin      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,8 @@ ft_strlcat.o ft_strchr.o ft_strrchr.o ft_strnstr.o ft_strncmp.o ft_atoi.o\
 ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o\
 ft_tolower.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o\
 ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o ft_putstr_fd.o\
-ft_putendl_fd.o ft_putnbr_fd.o ft_numlen.o ft_numlen_base.o ft_itoa_base.o ft_strtoupper.o)
+ft_putendl_fd.o ft_putnbr_fd.o ft_numlen.o ft_unsignednumlen_base.o\
+ft_ulltoa_base.o ft_strtoupper.o)
 
 ifdef DEBUG
 CFLAGS	+=	-g
