@@ -6,7 +6,7 @@
 /*   By: svrielin <svrielin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/04/12 17:34:12 by svrielin      #+#    #+#                 */
-/*   Updated: 2022/04/12 17:34:13 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/04/14 14:33:40 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,8 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 int		ft_numlen(int n);
-size_t	ft_numlen_base(unsigned long long n, int base);
-char	*ft_itoa_base(unsigned long long n, int base);
+size_t	ft_unsignednumlen_base(unsigned long long n, int base);
+char	*ft_ulltoa_base(unsigned long long n, int base);
 char	*ft_strtoupper(char *str);
 
 #endif
