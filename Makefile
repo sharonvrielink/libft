@@ -6,7 +6,7 @@
 #    By: svrielin <svrielin@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/11/16 13:32:03 by svrielin      #+#    #+#                  #
-#    Updated: 2022/04/14 15:10:04 by svrielin      ########   odam.nl          #
+#    Updated: 2022/04/16 13:05:37 by svrielin      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,7 @@ $(NAME): $(OBJ_FILES)
 
 # -p: if parent dirs do not exist, generate them to accommodate 
 # gcc -c: compile but not link the file, makes the result an object file
+# $< the first prerequisite
 # gcc -o: name of the output file
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(HEADER_FILES)
 	mkdir -p $(dir $@)
