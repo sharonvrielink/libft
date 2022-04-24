@@ -6,11 +6,11 @@
 /*   By: svrielin <svrielin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/16 17:19:23 by svrielin      #+#    #+#                 */
-/*   Updated: 2021/11/16 12:17:07 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/04/24 14:26:54 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 static size_t	ft_count_words(char const *s, char c)
 {

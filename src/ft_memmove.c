@@ -6,11 +6,11 @@
 /*   By: svrielin <svrielin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/02 12:45:30 by svrielin      #+#    #+#                 */
-/*   Updated: 2021/02/21 18:19:20 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/04/24 14:26:19 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {

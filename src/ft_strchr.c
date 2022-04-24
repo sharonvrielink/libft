@@ -6,11 +6,11 @@
 /*   By: svrielin <svrielin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/03 10:32:17 by svrielin      #+#    #+#                 */
-/*   Updated: 2021/02/21 17:51:05 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/04/24 14:26:58 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

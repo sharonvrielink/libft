@@ -6,11 +6,11 @@
 /*   By: svrielin <svrielin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/27 10:46:34 by sharonvriel   #+#    #+#                 */
-/*   Updated: 2021/02/08 14:05:02 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/04/24 14:26:25 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {

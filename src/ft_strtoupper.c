@@ -6,11 +6,11 @@
 /*   By: svrielin <svrielin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/02/08 19:40:43 by svrielin      #+#    #+#                 */
-/*   Updated: 2022/04/12 17:37:58 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/04/24 14:27:47 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 char	*ft_strtoupper(char *str)
 {

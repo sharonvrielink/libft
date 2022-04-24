@@ -6,11 +6,11 @@
 /*   By: svrielin <svrielin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/14 17:20:12 by svrielin      #+#    #+#                 */
-/*   Updated: 2021/11/16 12:18:28 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/04/24 14:27:54 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 static char	*create_empty_string(void)
 {

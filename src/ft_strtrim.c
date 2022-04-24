@@ -6,11 +6,11 @@
 /*   By: svrielin <svrielin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/15 14:58:29 by svrielin      #+#    #+#                 */
-/*   Updated: 2021/02/21 17:00:43 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/04/24 14:27:50 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 int	check_char(char c, char const *set)
 {

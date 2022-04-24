@@ -6,11 +6,11 @@
 /*   By: svrielin <svrielin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/02/08 11:32:58 by svrielin      #+#    #+#                 */
-/*   Updated: 2022/04/14 14:41:22 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/04/24 14:28:04 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 char	*ft_ulltoa_base(unsigned long long n, int base)
 {
