@@ -3,17 +3,17 @@
 #                                                         ::::::::             #
 #    Makefile                                           :+:    :+:             #
 #                                                      +:+                     #
-#    By: svrielin <svrielin@student.codam.nl>         +#+                      #
+#    By: svrielin <svrielin@student.42.fr>            +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/11/16 13:32:03 by svrielin      #+#    #+#                  #
-#    Updated: 2022/04/16 13:18:06 by svrielin      ########   odam.nl          #
+#    Updated: 2022/09/04 18:08:16 by svrielin      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			=	libft.a
 HEADER_FILES 	:=	libft.h
 CC				:=	gcc
-CFLAGS			?=	-Wall -Wextra -Werror
+CFLAGS			?=	-g -Wall -Wextra -Werror
 
 #################################Project_files##################################
 SRC_DIR			:=	./src
@@ -25,7 +25,7 @@ ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o\
 ft_tolower.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o\
 ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o ft_putstr_fd.o\
 ft_putendl_fd.o ft_putnbr_fd.o ft_numlen.o ft_unsignednumlen_base.o\
-ft_ulltoa_base.o ft_strtoupper.o)
+ft_ulltoa_base.o ft_strtoupper.o ft_lstnew.o ft_lstadd_front.o ft_lstsize.o)
 
 ifdef DEBUG
 CFLAGS	+=	-g
@@ -48,6 +48,10 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(HEADER_FILES)
 	mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -c $< -o $@
 
+# !!!!!!!!!!!!!!!DELETE MAIN AGAIN!!!!!!!!!!!!!!!!!
+main:
+	$(CC) $(CFLAGS) main.c $(OBJ_FILES)
+
 clean:
 	@rm -f $(OBJ_FILES) 
 	@rm -df $(OBJ_DIR)
@@ -58,5 +62,7 @@ fclean: clean
 	@echo "Library libft removed"
 
 re: fclean all
+
+bonus: all
 
 .PHONY: clean fclean
