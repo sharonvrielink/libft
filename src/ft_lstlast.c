@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_lstadd_front.c                                  :+:    :+:            */
+/*   ft_lstlast.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: svrielin <svrielin@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/09/04 14:57:17 by svrielin      #+#    #+#                 */
-/*   Updated: 2022/09/04 18:43:57 by svrielin      ########   odam.nl         */
+/*   Created: 2022/09/04 18:15:58 by svrielin      #+#    #+#                 */
+/*   Updated: 2022/09/04 19:24:46 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+t_list	*ft_lstlast(t_list *lst)
 {
-	if (lst && new)
+	printf("in function lstlast\n"); // wordt niks geprint terwijl deze functie wel z'n werk doet in main.
+	if (!lst)
+		return (NULL);
+	printf("in function lstlast\n");
+	while(lst->next)
 	{
-		new->next = *lst;
-		*lst = new;
+		printf("lst->next = true\n");
+		lst = lst->next;
 	}
+	return (lst);
 }

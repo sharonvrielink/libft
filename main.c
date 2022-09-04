@@ -6,7 +6,7 @@
 /*   By: svrielin <svrielin@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/09/04 14:26:04 by svrielin      #+#    #+#                 */
-/*   Updated: 2022/09/04 18:07:26 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/09/04 19:23:51 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	print_lst(t_list *lst)
 {
-		while (lst)
+	while (lst)
 	{
 		printf("Content lst = %d\n", *(int *)lst->content);
 		lst = lst->next;
@@ -49,6 +49,11 @@ int main(void)
 	ft_lstadd_front(&node1, newnode);
 	printf("After:\n");
 	print_lst(node1);
+	node1 = ft_lstlast(node1);
+	printf("After ft_lstlast:\n");
+	print_lst(node1);
+	ft_lstadd_back(&node1, newnode);
+	//print_lst(node1);
 
 }
 
