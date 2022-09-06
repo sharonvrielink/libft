@@ -6,7 +6,7 @@
 #    By: svrielin <svrielin@student.42.fr>            +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/11/16 13:32:03 by svrielin      #+#    #+#                  #
-#    Updated: 2022/09/04 18:59:12 by svrielin      ########   odam.nl          #
+#    Updated: 2022/09/06 20:29:22 by svrielin      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,7 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(HEADER_FILES)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # !!!!!!!!!!!!!!!DELETE MAIN AGAIN!!!!!!!!!!!!!!!!!
-main:
+main: all
 	$(CC) $(CFLAGS) main.c $(OBJ_FILES)
 
 clean:
@@ -59,11 +59,13 @@ clean:
 	@echo "Object files and directory removed"
 
 fclean: clean
-	@rm -f $(NAME)
+	@rm -f $(NAME) a.out
+	@rm -rf a.out.dSYM
 	@echo "Library libft removed"
 
 re: fclean all
 
+#bonus rule just to use testers
 bonus: all
 
 .PHONY: clean fclean

@@ -6,7 +6,7 @@
 /*   By: svrielin <svrielin@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/09/04 18:15:58 by svrielin      #+#    #+#                 */
-/*   Updated: 2022/09/04 19:24:46 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/09/06 19:48:42 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,10 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	printf("in function lstlast\n"); // wordt niks geprint terwijl deze functie wel z'n werk doet in main.
 	if (!lst)
 		return (NULL);
-	printf("in function lstlast\n");
 	while(lst->next)
 	{
-		printf("lst->next = true\n");
 		lst = lst->next;
 	}
 	return (lst);
