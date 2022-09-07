@@ -6,7 +6,7 @@
 /*   By: svrielin <svrielin@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/09/07 10:04:01 by svrielin      #+#    #+#                 */
-/*   Updated: 2022/09/07 10:05:51 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/09/07 11:34:49 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,16 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	while
+	t_list	*nextnode;
+
+	if (lst && *lst && del)
+	{
+		while (*lst)
+		{
+			nextnode = (*lst)->next;
+			ft_lstdelone(*lst, del);
+			*lst = nextnode;
+		}
+		*lst = NULL;
+	}
 }
