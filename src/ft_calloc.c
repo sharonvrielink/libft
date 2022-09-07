@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_calloc.c                                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: svrielin <svrielin@student.codam.nl>         +#+                     */
+/*   By: svrielin <svrielin@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 12:09:44 by svrielin      #+#    #+#                 */
-/*   Updated: 2022/04/24 14:16:31 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/09/07 13:15:24 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

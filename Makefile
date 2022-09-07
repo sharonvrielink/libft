@@ -6,7 +6,7 @@
 #    By: svrielin <svrielin@student.42.fr>            +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/11/16 13:32:03 by svrielin      #+#    #+#                  #
-#    Updated: 2022/09/07 11:38:42 by svrielin      ########   odam.nl          #
+#    Updated: 2022/09/07 12:50:10 by svrielin      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ ft_tolower.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o\
 ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o ft_putstr_fd.o\
 ft_putendl_fd.o ft_putnbr_fd.o ft_numlen.o ft_unsignednumlen_base.o\
 ft_ulltoa_base.o ft_strtoupper.o ft_lstnew.o ft_lstadd_front.o ft_lstsize.o\
-ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o) #ft_lstmap.o)
+ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o)
 
 ifdef DEBUG
 CFLAGS	+=	-g
