@@ -6,12 +6,11 @@
 /*   By: svrielin <svrielin@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/09/04 18:15:58 by svrielin      #+#    #+#                 */
-/*   Updated: 2022/09/07 10:07:54 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/09/08 19:13:07 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h>
+#include "../libft.h"
 
 t_list	*ft_lstlast(t_list *lst)
 {

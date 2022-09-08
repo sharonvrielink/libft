@@ -6,11 +6,11 @@
 /*   By: svrielin <svrielin@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/09/07 10:04:01 by svrielin      #+#    #+#                 */
-/*   Updated: 2022/09/07 11:34:49 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/09/08 19:13:17 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {

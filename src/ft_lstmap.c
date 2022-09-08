@@ -6,14 +6,14 @@
 /*   By: svrielin <svrielin@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/09/07 11:47:05 by svrielin      #+#    #+#                 */
-/*   Updated: 2022/09/07 13:53:05 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/09/08 19:13:00 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*NOTE francinette tester 'alelievr' does not work, 
 because of the protection if del exists*/
 
-#include "libft.h"
+#include "../libft.h"
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
