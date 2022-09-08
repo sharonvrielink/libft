@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_memcpy.c                                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: svrielin <svrielin@student.codam.nl>         +#+                     */
+/*   By: svrielin <svrielin@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/27 16:21:32 by sharonvriel   #+#    #+#                 */
-/*   Updated: 2022/04/24 14:26:06 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/09/08 16:30:15 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	int				i;
+	size_t			i;
 	unsigned char	*dest;
 	unsigned char	*source;
 
@@ -23,7 +23,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	i = 0;
 	if (!dest && !source)
 		return (NULL);
-	while (i < (int) n)
+	while (i < n)
 	{
 		dest[i] = source[i];
 		i++;

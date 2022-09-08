@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strlen.c                                        :+:    :+:            */
+/*   ft_create_empty_string.c                           :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: svrielin <svrielin@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/26 17:44:29 by sharonvriel   #+#    #+#                 */
-/*   Updated: 2022/09/08 15:27:11 by svrielin      ########   odam.nl         */
+/*   Created: 2022/09/08 15:59:16 by svrielin      #+#    #+#                 */
+/*   Updated: 2022/09/08 15:59:54 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-size_t	ft_strlen(const char *s)
+char	*create_empty_string(void)
 {
-	size_t	i;
+	char	*str;
 
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
+	str = (char *)malloc(sizeof(char));
+	if (!str)
+		return (NULL);
+	str[0] = '\0';
+	return (str);
 }

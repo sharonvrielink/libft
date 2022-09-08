@@ -3,25 +3,14 @@
 /*                                                        ::::::::            */
 /*   ft_substr.c                                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: svrielin <svrielin@student.codam.nl>         +#+                     */
+/*   By: svrielin <svrielin@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/14 17:20:12 by svrielin      #+#    #+#                 */
-/*   Updated: 2022/04/24 14:27:54 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/09/08 16:00:51 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-
-static char	*create_empty_string(void)
-{
-	char	*dest;
-
-	dest = (char *)malloc(1 * sizeof(char));
-	if (dest == 0)
-		return (0);
-	dest[0] = 0;
-	return (dest);
-}
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

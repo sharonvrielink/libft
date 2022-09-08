@@ -6,15 +6,24 @@
 /*   By: svrielin <svrielin@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/04/12 17:34:12 by svrielin      #+#    #+#                 */
-/*   Updated: 2022/09/07 12:52:36 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/09/08 16:56:34 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# endif
+
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1
+# endif
 
 # include <stddef.h>
 # include <stdlib.h>
+# include <unistd.h>
+# include <limits.h>
 
 typedef struct s_list
 {
@@ -46,6 +55,7 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
+char	*ft_strndup(const char *s1, size_t n);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
@@ -70,4 +80,10 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+/*get_next_line*/
+char	*get_next_line(int fd);
+char	*ft_strndup(const char *s1, size_t n);
+char	*ft_gnlstrjoin(char *s1, char *s2);
+char	*create_empty_string(void);
+
 #endif

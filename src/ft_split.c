@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_split.c                                         :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: svrielin <svrielin@student.codam.nl>         +#+                     */
+/*   By: svrielin <svrielin@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/16 17:19:23 by svrielin      #+#    #+#                 */
-/*   Updated: 2022/04/24 14:26:54 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/09/08 16:45:41 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,33 +37,6 @@ static size_t	ft_count_words(char const *s, char c)
 	if (s[i - 1] == c)
 		return (count - 1);
 	return (count);
-}
-
-static char	*ft_strndup(char const *s, size_t n)
-{
-	char	*dest;
-	size_t	i;
-
-	i = 0;
-	while (s[i] != 0)
-		i++;
-	if (i < n)
-		dest = (char *)malloc((i + 1) * sizeof(char));
-	else
-		dest = (char *)malloc((n + 1) * sizeof(char));
-	if (dest == 0)
-		return (0);
-	if (i < n)
-		dest[i] = 0;
-	else
-		dest[n] = 0;
-	i = 0;
-	while (i < n && s[i] != 0)
-	{
-		dest[i] = s[i];
-		i++;
-	}
-	return (dest);
 }
 
 static size_t	find_delimiter(char const *s, char c)
