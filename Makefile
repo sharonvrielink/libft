@@ -6,14 +6,14 @@
 #    By: svrielin <svrielin@student.42.fr>            +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/11/16 13:32:03 by svrielin      #+#    #+#                  #
-#    Updated: 2022/09/08 16:44:23 by svrielin      ########   odam.nl          #
+#    Updated: 2022/09/08 20:48:56 by svrielin      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			=	libft.a
 HEADER_FILES 	:=	libft.h
 CC				:=	gcc
-CFLAGS			?=	-g -Wall -Wextra -Werror
+CFLAGS			?=	-Wall -Wextra -Werror$(if $(DEBUG), -g -fsanitize=address)
 
 #################################Project_files##################################
 SRC_DIR			:=	./src
@@ -28,11 +28,6 @@ ft_putendl_fd.o ft_putnbr_fd.o ft_numlen.o ft_unsignednumlen_base.o\
 ft_ulltoa_base.o ft_strtoupper.o ft_lstnew.o ft_lstadd_front.o ft_lstsize.o\
 ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o\
 ft_create_empty_string.o ft_strndup.o get_next_line.o get_next_line_utils.o)
-
-ifdef DEBUG
-CFLAGS	+=	-g
-NAME = libft_debug.a
-endif
 
 all: $(NAME)
 
@@ -50,10 +45,6 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(HEADER_FILES)
 	mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-# !!!!!!!!!!!!!!!DELETE MAIN AGAIN!!!!!!!!!!!!!!!!!
-main: all
-	$(CC) $(CFLAGS) main.c $(OBJ_FILES)
-
 clean:
 	@rm -f $(OBJ_FILES) 
 	@rm -df $(OBJ_DIR)
@@ -69,4 +60,8 @@ re: fclean all
 #bonus rule just to use testers
 bonus: all
 
+# !!!!!!!!!!!!!!!DELETE MAIN AGAIN!!!!!!!!!!!!!!!!!
+main: all
+	$(CC) $(CFLAGS) main.c $(OBJ_FILES)
+	
 .PHONY: clean fclean
