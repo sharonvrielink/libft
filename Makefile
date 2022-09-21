@@ -6,14 +6,14 @@
 #    By: svrielin <svrielin@student.42.fr>            +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/11/16 13:32:03 by svrielin      #+#    #+#                  #
-#    Updated: 2022/09/11 19:15:24 by svrielin      ########   odam.nl          #
+#    Updated: 2022/09/21 17:14:54 by svrielin      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			=	libft.a
 HEADER_FILES 	:=	libft.h
 CC				:=	gcc
-CFLAGS			?=	-Wall -Wextra -Werror$(if $(DEBUG), -g)
+CFLAGS			?=	-Wall -Wextra -Werror$(if $(DEBUG), -g)$(if $(FSAN), -g -fsanitize=address)
 
 #################################Project_files##################################
 SRC_DIR			:=	./src
