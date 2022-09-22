@@ -6,7 +6,7 @@
 /*   By: svrielin <svrielin@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/04/12 17:34:12 by svrielin      #+#    #+#                 */
-/*   Updated: 2022/09/08 16:56:34 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/09/22 16:05:01 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
+# include <stdarg.h>
 
 typedef struct s_list
 {
@@ -85,5 +86,16 @@ char	*get_next_line(int fd);
 char	*ft_strndup(const char *s1, size_t n);
 char	*ft_gnlstrjoin(char *s1, char *s2);
 char	*create_empty_string(void);
+/*ft_printf*/
+int		ft_printf(const char *format, ...);
+int		ft_printer(const char *format, va_list args);
+void	converter(int specifier, va_list args, int *len);
+void	printchar(va_list args, int *len);
+void	printstring(va_list args, int *len);
+void	printnumber(va_list args, int *len);
+void	printunsignednumber(va_list args, int *len);
+void	printhex(va_list args, int *len);
+void	printhex_upper(va_list args, int *len);
+void	printpointer(va_list args, int *len);
 
 #endif

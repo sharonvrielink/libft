@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_lstadd_back.c                                   :+:    :+:            */
+/*   printchar.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: svrielin <svrielin@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/09/04 18:35:14 by svrielin      #+#    #+#                 */
-/*   Updated: 2022/09/22 16:06:59 by svrielin      ########   odam.nl         */
+/*   Created: 2022/04/12 16:29:09 by svrielin      #+#    #+#                 */
+/*   Updated: 2022/09/22 16:03:35 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-#include <stdio.h>
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	printchar(va_list args, int *len)
 {
-	t_list	*last;
-
-	if (lst && *lst && new)
-	{
-		last = ft_lstlast(*lst);
-		last->next = new;
-	}
-	else if (new)
-		*lst = new;
+	ft_putchar_fd(va_arg(args, int), 1);
+	*len += 1;
 }

@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_lstadd_back.c                                   :+:    :+:            */
+/*   printhex_upper.c                                   :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: svrielin <svrielin@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/09/04 18:35:14 by svrielin      #+#    #+#                 */
-/*   Updated: 2022/09/22 16:06:59 by svrielin      ########   odam.nl         */
+/*   Created: 2022/04/12 16:51:11 by svrielin      #+#    #+#                 */
+/*   Updated: 2022/09/22 16:04:24 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-#include <stdio.h>
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	printhex_upper(va_list args, int *len)
 {
-	t_list	*last;
+	unsigned int	nbr;
+	char			*str;
 
-	if (lst && *lst && new)
-	{
-		last = ft_lstlast(*lst);
-		last->next = new;
-	}
-	else if (new)
-		*lst = new;
+	nbr = va_arg(args, unsigned int);
+	str = ft_ulltoa_base(nbr, 16);
+	if (!str)
+		return ;
+	str = ft_strtoupper(str);
+	ft_putstr_fd(str, 1);
+	free(str);
+	*len += ft_unsignednumlen_base(nbr, 16);
 }

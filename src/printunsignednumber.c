@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_lstadd_back.c                                   :+:    :+:            */
+/*   printunsignednumber.c                              :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: svrielin <svrielin@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/09/04 18:35:14 by svrielin      #+#    #+#                 */
-/*   Updated: 2022/09/22 16:06:59 by svrielin      ########   odam.nl         */
+/*   Created: 2022/04/12 16:34:48 by svrielin      #+#    #+#                 */
+/*   Updated: 2022/09/22 16:06:08 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-#include <stdio.h>
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	printunsignednumber(va_list args, int *len)
 {
-	t_list	*last;
+	unsigned int	nbr;
+	char			*str;
 
-	if (lst && *lst && new)
-	{
-		last = ft_lstlast(*lst);
-		last->next = new;
-	}
-	else if (new)
-		*lst = new;
+	nbr = va_arg(args, unsigned int);
+	str = ft_ulltoa_base(nbr, 10);
+	if (!str)
+		return ;
+	ft_putstr_fd(str, 1);
+	free(str);
+	*len += ft_unsignednumlen_base(nbr, 10);
 }

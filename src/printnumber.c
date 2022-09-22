@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_lstadd_back.c                                   :+:    :+:            */
+/*   printnumber.c                                      :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: svrielin <svrielin@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/09/04 18:35:14 by svrielin      #+#    #+#                 */
-/*   Updated: 2022/09/22 16:06:59 by svrielin      ########   odam.nl         */
+/*   Created: 2022/04/12 16:31:54 by svrielin      #+#    #+#                 */
+/*   Updated: 2022/09/22 16:05:52 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-#include <stdio.h>
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	printnumber(va_list args, int *len)
 {
-	t_list	*last;
+	int	nbr;
 
-	if (lst && *lst && new)
-	{
-		last = ft_lstlast(*lst);
-		last->next = new;
-	}
-	else if (new)
-		*lst = new;
+	nbr = va_arg(args, int);
+	ft_putnbr_fd(nbr, 1);
+	*len += ft_numlen(nbr);
 }
