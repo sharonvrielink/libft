@@ -6,19 +6,14 @@
 /*   By: svrielin <svrielin@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/04/12 17:34:12 by svrielin      #+#    #+#                 */
-/*   Updated: 2022/09/22 16:05:01 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/10/30 21:39:47 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# endif
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1
-# endif
+# define BUFFER_SIZE 1
 
 # include <stddef.h>
 # include <stdlib.h>
