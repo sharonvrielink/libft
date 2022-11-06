@@ -3,12 +3,29 @@
 /*                                                        ::::::::            */
 /*   ft_atoi.c                                          :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: svrielin <svrielin@student.codam.nl>         +#+                     */
+/*   By: svrielin <svrielin@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/26 16:31:01 by sharonvriel   #+#    #+#                 */
-/*   Updated: 2021/02/23 17:41:13 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/11/06 10:57:57 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../libft.h"
+
+int	ft_atoi_error(t_int_error errorcode)
+{
+	if (errorcode == INT_TOOBIG)
+	{
+		ft_putstr_fd("Number is bigger than max int\n", STDERR_FILENO);
+		exit(EXIT_FAILURE);
+	}
+	if (errorcode == INT_TOOSMALL)
+	{
+		ft_putstr_fd("Number is smaller then min int\n", STDERR_FILENO);
+		exit(EXIT_FAILURE);
+	}
+	return (0);
+}
 
 int	ft_atoi(const char *str)
 {
@@ -31,9 +48,9 @@ int	ft_atoi(const char *str)
 		number = number * 10 + (*str - '0');
 		str++;
 		if (number * negpos < -2147483648)
-			return (0);
+			ft_atoi_error(INT_TOOSMALL);
 		if (number * negpos > 2147483647)
-			return (-1);
+			ft_atoi_error(INT_TOOBIG);
 	}
 	return ((int) number * negpos);
 }
