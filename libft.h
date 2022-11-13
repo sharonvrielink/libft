@@ -6,7 +6,7 @@
 /*   By: svrielin <svrielin@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/04/12 17:34:12 by svrielin      #+#    #+#                 */
-/*   Updated: 2022/11/06 10:46:26 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/11/13 12:07:20 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ int		ft_numlen(int n);
 size_t	ft_unsignednumlen_base(unsigned long long n, int base);
 char	*ft_ulltoa_base(unsigned long long n, int base);
 char	*ft_strtoupper(char *str);
+void	print_nbrarray(int *array, int len);
 /*lists*/
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);

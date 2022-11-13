@@ -6,7 +6,7 @@
 #    By: svrielin <svrielin@student.42.fr>            +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/11/16 13:32:03 by svrielin      #+#    #+#                  #
-#    Updated: 2022/09/22 16:01:34 by svrielin      ########   odam.nl          #
+#    Updated: 2022/11/13 12:10:09 by svrielin      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ ft_ulltoa_base.o ft_strtoupper.o ft_lstnew.o ft_lstadd_front.o ft_lstsize.o\
 ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o\
 ft_create_empty_string.o ft_strndup.o get_next_line.o get_next_line_utils.o\
 ft_printf.o printchar.o printhex_upper.o printhex.o printnumber.o printpointer.o\
-printstring.o printunsignednumber.o)
+printstring.o printunsignednumber.o printnumber_array.o)
 
 all: $(NAME)
 
