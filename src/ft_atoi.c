@@ -6,26 +6,11 @@
 /*   By: svrielin <svrielin@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/26 16:31:01 by sharonvriel   #+#    #+#                 */
-/*   Updated: 2022/11/06 12:54:31 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/12/04 17:21:54 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-
-int	ft_atoi_error(t_int_error errorcode)
-{
-	if (errorcode == INT_TOOBIG)
-	{
-		ft_putstr_fd("Error: number is bigger than max int\n", STDERR_FILENO);
-		exit(EXIT_FAILURE);
-	}
-	if (errorcode == INT_TOOSMALL)
-	{
-		ft_putstr_fd("Error: number is smaller then min int\n", STDERR_FILENO);
-		exit(EXIT_FAILURE);
-	}
-	return (0);
-}
 
 int	ft_atoi(const char *str)
 {
@@ -48,14 +33,9 @@ int	ft_atoi(const char *str)
 		number = number * 10 + (*str - '0');
 		str++;
 		if (number * negpos < -2147483648)
-			ft_atoi_error(INT_TOOSMALL);
+			return (0);
 		if (number * negpos > 2147483647)
-			ft_atoi_error(INT_TOOBIG);
-	}
-	if (!ft_isdigit(*str) && *str != '\0')
-	{
-		ft_putstr_fd("Error: nondigit character in input\n", STDERR_FILENO);
-		exit(EXIT_FAILURE);
+			return (0);
 	}
 	return ((int) number * negpos);
 }

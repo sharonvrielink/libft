@@ -6,7 +6,7 @@
 /*   By: svrielin <svrielin@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/09/06 20:31:55 by svrielin      #+#    #+#                 */
-/*   Updated: 2022/09/22 20:03:12 by svrielin      ########   odam.nl         */
+/*   Updated: 2022/12/04 15:18:15 by svrielin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (del && lst)
-	{
+	free(lst);
+	if (del)
 		del(lst->content);
-		free(lst);
-	}
 }
