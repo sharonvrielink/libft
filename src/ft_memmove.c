@@ -14,14 +14,12 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int				i;
 	int				j;
 	unsigned char	*dest;
 	unsigned char	*source;
 
 	dest = (unsigned char *) dst;
 	source = (unsigned char *) src;
-	i = 0;
 	j = len - 1;
 	if (!dest && !source)
 		return (NULL);
